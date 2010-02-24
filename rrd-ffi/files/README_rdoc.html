@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>File: README.rdoc [RRD]</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <link href='../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='file' id='wrapper'>
+      <div class='header'>
+        <div class='name'>README.rdoc</div>
+        <div class='paths'>
+          README.rdoc
+        </div>
+        <div class='last-update'>
+          Last Update:
+          <span class='datetime'>Wed Feb 24 17:10:12 -0300 2010</span>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <h1>Introduction</h1>
+            <p>
+            rrd-ffi is a gem for using rrd actions in your ruby code.
+            </p>
+            <p>
+            You may use it in the raw format, as many rrd libs in languages like perl
+            or python, or you can use it through the dsl we provide.
+            </p>
+            <p>
+            rrd-ffi uses ffi to wrap the librrd C bindings, not system calls
+            </p>
+            <h1>Basics</h1>
+            <p>
+            Here&#8217;s what you need to know before starting.
+            </p>
+            <h2>Installation</h2>
+            <p>
+            To install rrd-ffi, you will need to have librrd in your system.
+            </p>
+            <p>
+            Then, run <tt>sudo gem install rrd-ffi</tt>
+            </p>
+            <p>
+            If you are using Mac Ports you will have problems, so add the following to
+            your .profile/.bashrc/.bash_profile file:
+            </p>
+            <p>
+            <tt>export RRD_LIB=/opt/local/lib/librrd.dylib</tt>
+            </p>
+            <p>
+            If you are not using MAC OS and still have problems, export the RRD_PATH
+            variable with the path to your librrd file.
+            </p>
+            <h2>Example Usage</h2>
+            <pre>require &quot;rrd&quot;&#x000A;rrd = RRD::Base.new(&quot;myrrd.rrd&quot;)&#x000A;# Restoring a rrd file from xml&#x000A;rrd.restore(&quot;myrrd.xml&quot;)&#x000A;&#x000A;# Looking for the first and last entered dates&#x000A;puts rrd.starts_at&#x000A;puts rrd.ends_at&#x000A;&#x000A;# Generating a graph with memory and cpu usage from myrrd.rrd file&#x000A;RRD.graph &quot;graph.png&quot;, :title =&gt; &quot;Test&quot;, :width =&gt; 800, :height =&gt; 250 do&#x000A;  area &quot;myrrd.rrd&quot;, :cpu0 =&gt; :average, :color =&gt; &quot;#00FF00&quot;, :label =&gt; &quot;CPU 0&quot;&#x000A;  line &quot;myrrd.rrd&quot;, :memory =&gt; :average, :color =&gt; &quot;#0000FF&quot;, :label =&gt; &quot;Memory&quot;&#x000A;end</pre>
+            <h2>Raw API Usage</h2>
+            <pre># Creating a rrd file&#x000A;RRD::Wrapper.create &quot;myrrd.rrd&quot;, &quot;--step&quot;, &quot;300&quot;, &quot;DS:ifOutOctets:COUNTER:1800:0:4294967295&quot;, &quot;RRA:AVERAGE:0.5:1:2016&quot;&#x000A;&#x000A;# Updating rrd with a new value&#x000A;RRD::Wrapper.update &quot;myrrd.rrd&quot;, &quot;N:500000000&quot;&#x000A;&#x000A;# Creating a graph&#x000A;RRD::Wrapper.graph(&quot;graph.png&quot;, &quot;DEF:data=myrrd.rrd:ifOutOctets:AVERAGE&quot;, &quot;LINE1:data#0000FF:Output bytes&quot;)</pre>
+          </div>
+          <div id='section'>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>
