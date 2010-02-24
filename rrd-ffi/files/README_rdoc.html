@@ -31,7 +31,7 @@
         </div>
         <div class='last-update'>
           Last Update:
-          <span class='datetime'>Wed Feb 24 17:10:12 -0300 2010</span>
+          <span class='datetime'>Wed Feb 24 18:05:45 -0300 2010</span>
         </div>
       </div>
       <div id='content'>
@@ -63,9 +63,11 @@
             If you are using Mac Ports you will have problems, so add the following to
             your .profile/.bashrc/.bash_profile file:
             </p>
+            <pre>export RRD_LIB=/opt/local/lib/librrd.dylib</pre>
             <p>
-            <tt>export RRD_LIB=/opt/local/lib/librrd.dylib</tt>
+            or
             </p>
+            <pre>export LD_LIBRARY_PATH=/opt/local/lib</pre>
             <p>
             If you are not using MAC OS and still have problems, export the RRD_PATH
             variable with the path to your librrd file.
