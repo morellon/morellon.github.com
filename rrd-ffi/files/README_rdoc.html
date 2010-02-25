@@ -31,7 +31,7 @@
         </div>
         <div class='last-update'>
           Last Update:
-          <span class='datetime'>Thu Feb 25 16:52:26 -0300 2010</span>
+          <span class='datetime'>Thu Feb 25 16:55:03 -0300 2010</span>
         </div>
       </div>
       <div id='content'>
@@ -75,8 +75,13 @@
             </p>
             <h3>Installing librrd</h3>
             <p>
-            Debian/Ubuntu: <tt>apt-get install librrd-dev</tt> Fedora/Red Hat: <tt>yum
-            install rrdtool-devel</tt> Mac: <tt>port install rrdtool</tt>
+            Debian/Ubuntu: <tt>apt-get install librrd-dev</tt>
+            </p>
+            <p>
+            Fedora/Red Hat: <tt>yum install rrdtool-devel</tt>
+            </p>
+            <p>
+            Mac: <tt>port install rrdtool</tt>
             </p>
             <h2>Example Usage</h2>
             <pre>require &quot;rrd&quot;&#x000A;rrd = RRD::Base.new(&quot;myrrd.rrd&quot;)&#x000A;# Restoring a rrd file from xml&#x000A;rrd.restore(&quot;myrrd.xml&quot;)&#x000A;&#x000A;# Fetching data from rrd&#x000A;rrd.fetch(:average).each {|line| puts line.inspect}&#x000A;&#x000A;# Collecting information from rrd&#x000A;puts rrd.info.to_yaml&#x000A;&#x000A;# Updating rrd (this rrd example has 3 datasources)&#x000A;rrd.update Time.now, 500, nil, 30&#x000A;&#x000A;# Looking for the first and last entered dates&#x000A;puts rrd.starts_at&#x000A;puts rrd.ends_at</pre>
