@@ -31,7 +31,7 @@
         </div>
         <div class='last-update'>
           Last Update:
-          <span class='datetime'>Thu Feb 25 15:18:07 -0300 2010</span>
+          <span class='datetime'>Thu Feb 25 15:41:47 -0300 2010</span>
         </div>
       </div>
       <div id='content'>
@@ -73,7 +73,7 @@
             variable with the path to your librrd file.
             </p>
             <h2>Example Usage</h2>
-            <pre>require &quot;rrd&quot;&#x000A;rrd = RRD::Base.new(&quot;myrrd.rrd&quot;)&#x000A;# Restoring a rrd file from xml&#x000A;rrd.restore(&quot;myrrd.xml&quot;)&#x000A;&#x000A;# Fetching data from rrd&#x000A;rrd.fetch.each {|line| puts line.inspect}&#x000A;&#x000A;# Collecting information from rrd&#x000A;puts rrd.info.to_yaml&#x000A;&#x000A;# Updating rrd (this rrd example has 3 datasources)&#x000A;rrd.update Time.now, 500, nil, 30&#x000A;&#x000A;# Looking for the first and last entered dates&#x000A;puts rrd.starts_at&#x000A;puts rrd.ends_at</pre>
+            <pre>require &quot;rrd&quot;&#x000A;rrd = RRD::Base.new(&quot;myrrd.rrd&quot;)&#x000A;# Restoring a rrd file from xml&#x000A;rrd.restore(&quot;myrrd.xml&quot;)&#x000A;&#x000A;# Fetching data from rrd&#x000A;rrd.fetch(:average).each {|line| puts line.inspect}&#x000A;&#x000A;# Collecting information from rrd&#x000A;puts rrd.info.to_yaml&#x000A;&#x000A;# Updating rrd (this rrd example has 3 datasources)&#x000A;rrd.update Time.now, 500, nil, 30&#x000A;&#x000A;# Looking for the first and last entered dates&#x000A;puts rrd.starts_at&#x000A;puts rrd.ends_at</pre>
             <h3>DSLs</h3>
             <pre># Creating a new rrd&#x000A;rrd = RRD::Base.new(&quot;myrrd.rrd&quot;)&#x000A;rrd.create :start =&gt; Time.now - 10.seconds, :step =&gt; 5.minutes do&#x000A;  datasource &quot;memory&quot;, :type =&gt; :gauge, :heartbeat =&gt; 10.minutes, :min =&gt; 0, :max =&gt; :unlimited&#x000A;  archive :average, :every =&gt; 10.minutes, :during =&gt; 1.year&#x000A;end&#x000A;&#x000A;# Generating a graph with memory and cpu usage from myrrd.rrd file&#x000A;RRD.graph &quot;graph.png&quot;, :title =&gt; &quot;Test&quot;, :width =&gt; 800, :height =&gt; 250 do&#x000A;  area &quot;myrrd.rrd&quot;, :cpu0 =&gt; :average, :color =&gt; &quot;#00FF00&quot;, :label =&gt; &quot;CPU 0&quot;&#x000A;  line &quot;myrrd.rrd&quot;, :memory =&gt; :average, :color =&gt; &quot;#0000FF&quot;, :label =&gt; &quot;Memory&quot;&#x000A;end&#x000A;&#x000A;# Generating a more complex graph using advanced DSL&#x000A;RRD.graph IMG_FILE, :title =&gt; &quot;Test&quot;, :width =&gt; 800, :height =&gt; 250, :start =&gt; Time.now - 1.day, :end =&gt; Time.now do&#x000A;  for_rrd_data &quot;cpu0&quot;, :cpu0 =&gt; :average, :from =&gt; RRD_FILE&#x000A;  for_rrd_data &quot;mem&quot;, :memory =&gt; :average, :from =&gt; RRD_FILE&#x000A;  using_calculated_data &quot;half_mem&quot;, :calc =&gt; &quot;mem,2,/&quot;&#x000A;  using_value &quot;mem_avg&quot;, :calc =&gt; &quot;mem,AVERAGE&quot;&#x000A;  draw_line :data =&gt; &quot;mem&quot;, :color =&gt; &quot;#0000FF&quot;, :label =&gt; &quot;Memory&quot;, :width =&gt; 1&#x000A;  draw_area :data =&gt; &quot;cpu0&quot;, :color =&gt; &quot;#00FF00&quot;, :label =&gt; &quot;CPU 0&quot;&#x000A;  print_comment &quot;Information - &quot;&#x000A;  print_value &quot;mem_avg&quot;, :format =&gt; &quot;%6.2lf %SB&quot;&#x000A;end</pre>
             <h2>Raw API Usage</h2>
