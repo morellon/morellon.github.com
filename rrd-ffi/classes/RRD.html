@@ -31,10 +31,13 @@
         </h1>
         <ol class='paths'>
           <li>
-            <a href="../files/lib/rrd/graph_rb.html">lib/rrd/graph.rb</a>
+            <a href="../files/lib/rrd/base_rb.html">lib/rrd/base.rb</a>
           </li>
           <li class='other'>
-            <a href="../files/lib/rrd/base_rb.html">lib/rrd/base.rb</a>
+            <a href="../files/lib/rrd/builder_rb.html">lib/rrd/builder.rb</a>
+          </li>
+          <li class='other'>
+            <a href="../files/lib/rrd/graph_rb.html">lib/rrd/graph.rb</a>
           </li>
           <li class='other'>
             <a href="../files/lib/rrd/version_rb.html">lib/rrd/version.rb</a>
@@ -56,29 +59,44 @@
             <h2>Methods</h2>
             <h3>public instance</h3>
             <ol>
-              <li><a href="#M000001">graph</a></li>
+              <li><a href="#M000015">graph</a></li>
+              <li><a href="#M000016">to_line_parameters</a></li>
             </ol>
           </div>
           <div id='section'>
             <div id='class-list'>
               <h2>Classes and Modules</h2>
               Class <a href="RRD/Base.html" class="link">RRD::Base</a><br />
+              Class <a href="RRD/Builder.html" class="link">RRD::Builder</a><br />
               Class <a href="RRD/Graph.html" class="link">RRD::Graph</a><br />
               Class <a href="RRD/Wrapper.html" class="link">RRD::Wrapper</a><br />
             </div>
             <div id='methods'>
               <h2>Public instance methods</h2>
-              <div class='method public-instance' id='method-M000001'>
-                <a name='M000001'></a>
+              <div class='method public-instance' id='method-M000015'>
+                <a name='M000015'></a>
                 <div class='synopsis'>
                   <span class='name'>graph</span>
                   <span class='arguments'>(image_file, options, &amp;block)</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000001-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000015-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000001-source'>    <span class="ruby-comment cmt"># File lib/rrd.rb, line 10</span>&#x000A;10:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">graph</span>(<span class="ruby-identifier">image_file</span>, <span class="ruby-identifier">options</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;11:     <span class="ruby-identifier">graph</span> = <span class="ruby-constant">Graph</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">image_file</span>, <span class="ruby-identifier">options</span>)&#x000A;12:     <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;13:     <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">save</span>&#x000A;14:   <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000015-source'>    <span class="ruby-comment cmt"># File lib/rrd.rb, line 12</span>&#x000A;12:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">graph</span>(<span class="ruby-identifier">image_file</span>, <span class="ruby-identifier">options</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;13:     <span class="ruby-identifier">graph</span> = <span class="ruby-constant">Graph</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">image_file</span>, <span class="ruby-identifier">options</span>)&#x000A;14:     <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;15:     <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">save</span>&#x000A;16:   <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-M000016'>
+                <a name='M000016'></a>
+                <div class='synopsis'>
+                  <span class='name'>to_line_parameters</span>
+                  <span class='arguments'>(hash)</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000016-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000016-source'>    <span class="ruby-comment cmt"># File lib/rrd.rb, line 18</span>&#x000A;18:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_line_parameters</span>(<span class="ruby-identifier">hash</span>)&#x000A;19:     <span class="ruby-identifier">line_params</span> = <span class="ruby-constant">Hash</span>[<span class="ruby-operator">*</span><span class="ruby-identifier">hash</span>.<span class="ruby-identifier">reduce</span>([]) { <span class="ruby-operator">|</span><span class="ruby-identifier">result</span>, (<span class="ruby-identifier">key</span>,<span class="ruby-identifier">value</span>)<span class="ruby-operator">|</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">+=</span> [<span class="ruby-node">&quot;--#{key}&quot;</span>, <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>] }]&#x000A;20:     <span class="ruby-identifier">line_params</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">reduce</span>([]) { <span class="ruby-operator">|</span><span class="ruby-identifier">result</span>, <span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">+=</span> [<span class="ruby-identifier">key</span>, <span class="ruby-identifier">line_params</span>[<span class="ruby-identifier">key</span>]] }&#x000A;21:   <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
             </div>
