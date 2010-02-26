@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>File: CHANGELOG.rdoc [Stomp]</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <link href='../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='file' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>CHANGELOG.rdoc</h1>
+        <div class='paths'>
+          CHANGELOG.rdoc
+        </div>
+        <div class='last-update'>
+          Last Update:
+          <span class='datetime'>Thu Jan 21 09:43:14 -0200 2010</span>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <h2>1.1.4 2010-21-01</h2>
+            <ul>
+            <li>Added unreceive message method that sends the message back to its queue or
+            to the dead letter queue, depending on the :max_redeliveries option,
+            similar to a13m one.
+            
+            </li>
+            <li>Added environment variable option for running &#8216;rake test&#8217; on
+            any stomp server, using any port with any user.
+            
+            </li>
+            <li>Added suppress_content_length header option for ActiveMQ knowing it is a
+            text message (see: <a
+            href="http://juretta.com/log/2009/05/24/activemq-jms-stomp">juretta.com/log/2009/05/24/activemq-jms-stomp</a>/)
+            
+            </li>
+            <li>Fixed some bugs with Ruby 1.9 (concatenate string + exception)
+            
+            </li>
+            <li>Major changes on message parsing feature
+            
+            </li>
+            <li>Fixed bug with old socket not being closed when using failover
+            
+            </li>
+            <li>Fixed broken poll method on Connection
+            
+            </li>
+            <li>Fixed broken close method on Client
+            
+            </li>
+            <li>Added connection_frame accessor
+            
+            </li>
+            <li>Added disconnect receipt
+            
+            </li>
+            </ul>
+            <h2>1.1.3 2009-24-11</h2>
+            <ul>
+            <li>Failover support
+            
+            </li>
+            <li>SSL support
+            
+            </li>
+            <li><a href="../classes/Stomp/Connection.html">Stomp::Connection</a> and <a
+            href="../classes/Stomp/Client.html">Stomp::Client</a> accept a hash on
+            their constructor
+            
+            </li>
+            </ul>
+            <h2>1.1 2009-27-02</h2>
+            <ul>
+            <li>Ruby 1.9 Support
+            
+            </li>
+            <li>Add support for connect_headers, to control the CONNECT command.
+            
+            </li>
+            <li>Refactored lib dir to separate concerns.
+            
+            </li>
+            <li>Better test coverage
+            
+            </li>
+            <li>General code cleanup.
+            
+            </li>
+            </ul>
+            <h2>1.0.6 2008-05-08</h2>
+            <ul>
+            <li>Whitespace cleanup
+            
+            </li>
+            <li>Refactored Rakefile and added stomp.gemspec for GitHub friendliness.
+            
+            </li>
+            <li>Added .gitignore file
+            
+            </li>
+            <li>Refactored layout of lib dir to separate concerns
+            
+            </li>
+            <li>Cleanup of initializers, and provide Client accessors for reading values
+            (for testing)
+            
+            </li>
+            <li>Removed test/test_url_* files as they only differed from the test_client.rb
+            in their setup. Super UnDry. Added URL tests to cover stomp URL as param.
+            
+            </li>
+            <li>Created initial RSpec specs which stub/mock objects and should not require
+            a running <a href="../classes/Stomp.html">Stomp</a> server instance.
+            
+            </li>
+            </ul>
+            <h2>v1.0.5</h2>
+            <p>
+            SVN rev 86 clone from <a
+            href="http://svn.codehaus.org/stomp/ruby/trunk">svn.codehaus.org/stomp/ruby/trunk</a>
+            </p>
+            <p>
+            git-svn-id: <a
+            href="http://svn.codehaus.org/stomp/ruby/trunk@86">svn.codehaus.org/stomp/ruby/trunk@86</a>
+            fd4e7336-3dff-0310-b68a-b6615a75f13b
+            </p>
+          </div>
+          <div id='section'>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>
