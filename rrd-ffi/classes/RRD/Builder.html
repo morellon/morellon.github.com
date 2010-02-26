@@ -45,13 +45,13 @@
             <h2>Methods</h2>
             <h3>public class</h3>
             <ol>
-              <li><a href="#M000037">new</a></li>
+              <li><a href="#M000042">new</a></li>
             </ol>
             <h3>public instance</h3>
             <ol>
-              <li><a href="#M000039">archive</a></li>
-              <li><a href="#M000038">datasource</a></li>
-              <li><a href="#M000040">save</a></li>
+              <li><a href="#M000044">archive</a></li>
+              <li><a href="#M000043">datasource</a></li>
+              <li><a href="#M000045">save</a></li>
             </ol>
           </div>
           <div id='section'>
@@ -101,57 +101,57 @@
             </div>
             <div id='methods'>
               <h2>Public class methods</h2>
-              <div class='method public-class' id='method-M000037'>
-                <a name='M000037'></a>
+              <div class='method public-class' id='method-M000042'>
+                <a name='M000042'></a>
                 <div class='synopsis'>
                   <span class='name'>new</span>
                   <span class='arguments'>(output, parameters = {})</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000037-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000042-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000037-source'>    <span class="ruby-comment cmt"># File lib/rrd/builder.rb, line 8</span>&#x000A; 8:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">output</span>, <span class="ruby-identifier">parameters</span> = {})&#x000A; 9:       <span class="ruby-ivar">@output</span> = <span class="ruby-identifier">output</span>&#x000A;10:       &#x000A;11:       <span class="ruby-ivar">@parameters</span> = {<span class="ruby-identifier">:step</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>.<span class="ruby-identifier">minutes</span>, <span class="ruby-identifier">:start</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-value">10</span>.<span class="ruby-identifier">seconds</span> }.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">parameters</span>&#x000A;12:       <span class="ruby-ivar">@parameters</span>[<span class="ruby-identifier">:start</span>] = <span class="ruby-ivar">@parameters</span>[<span class="ruby-identifier">:start</span>].<span class="ruby-identifier">to_i</span>&#x000A;13:       &#x000A;14:       <span class="ruby-ivar">@datasources</span> = []&#x000A;15:       <span class="ruby-ivar">@archives</span> = []&#x000A;16:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000042-source'>    <span class="ruby-comment cmt"># File lib/rrd/builder.rb, line 8</span>&#x000A; 8:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">output</span>, <span class="ruby-identifier">parameters</span> = {})&#x000A; 9:       <span class="ruby-ivar">@output</span> = <span class="ruby-identifier">output</span>&#x000A;10:       &#x000A;11:       <span class="ruby-ivar">@parameters</span> = {<span class="ruby-identifier">:step</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>.<span class="ruby-identifier">minutes</span>, <span class="ruby-identifier">:start</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-value">10</span>.<span class="ruby-identifier">seconds</span> }.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">parameters</span>&#x000A;12:       <span class="ruby-ivar">@parameters</span>[<span class="ruby-identifier">:start</span>] = <span class="ruby-ivar">@parameters</span>[<span class="ruby-identifier">:start</span>].<span class="ruby-identifier">to_i</span>&#x000A;13:       &#x000A;14:       <span class="ruby-ivar">@datasources</span> = []&#x000A;15:       <span class="ruby-ivar">@archives</span> = []&#x000A;16:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
               <h2>Public instance methods</h2>
-              <div class='method public-instance' id='method-M000039'>
-                <a name='M000039'></a>
+              <div class='method public-instance' id='method-M000044'>
+                <a name='M000044'></a>
                 <div class='synopsis'>
                   <span class='name'>archive</span>
                   <span class='arguments'>(consolidation_function, options = {})</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000039-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000044-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000039-source'>    <span class="ruby-comment cmt"># File lib/rrd/builder.rb, line 26</span>&#x000A;26:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">archive</span>(<span class="ruby-identifier">consolidation_function</span>, <span class="ruby-identifier">options</span> = {})&#x000A;27:       <span class="ruby-identifier">options</span> = {<span class="ruby-identifier">:every</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>.<span class="ruby-identifier">minutes</span>, <span class="ruby-identifier">:during</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">day</span>}.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">options</span>&#x000A;28:       <span class="ruby-identifier">archive_steps</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:every</span>]<span class="ruby-operator">/</span><span class="ruby-identifier">parameters</span>[<span class="ruby-identifier">:step</span>]&#x000A;29:       <span class="ruby-identifier">archive_rows</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:during</span>]<span class="ruby-operator">/</span><span class="ruby-identifier">options</span>[<span class="ruby-identifier">:every</span>]&#x000A;30:       <span class="ruby-identifier">archive</span> = <span class="ruby-node">&quot;RRA:#{consolidation_function.to_s.upcase}:0.5:#{archive_steps}:#{archive_rows}&quot;</span>&#x000A;31:       <span class="ruby-identifier">archives</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">archive</span>&#x000A;32:       <span class="ruby-identifier">archive</span>&#x000A;33:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000044-source'>    <span class="ruby-comment cmt"># File lib/rrd/builder.rb, line 26</span>&#x000A;26:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">archive</span>(<span class="ruby-identifier">consolidation_function</span>, <span class="ruby-identifier">options</span> = {})&#x000A;27:       <span class="ruby-identifier">options</span> = {<span class="ruby-identifier">:every</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>.<span class="ruby-identifier">minutes</span>, <span class="ruby-identifier">:during</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">day</span>}.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">options</span>&#x000A;28:       <span class="ruby-identifier">archive_steps</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:every</span>]<span class="ruby-operator">/</span><span class="ruby-identifier">parameters</span>[<span class="ruby-identifier">:step</span>]&#x000A;29:       <span class="ruby-identifier">archive_rows</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:during</span>]<span class="ruby-operator">/</span><span class="ruby-identifier">options</span>[<span class="ruby-identifier">:every</span>]&#x000A;30:       <span class="ruby-identifier">archive</span> = <span class="ruby-node">&quot;RRA:#{consolidation_function.to_s.upcase}:0.5:#{archive_steps}:#{archive_rows}&quot;</span>&#x000A;31:       <span class="ruby-identifier">archives</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">archive</span>&#x000A;32:       <span class="ruby-identifier">archive</span>&#x000A;33:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000038'>
-                <a name='M000038'></a>
+              <div class='method public-instance' id='method-M000043'>
+                <a name='M000043'></a>
                 <div class='synopsis'>
                   <span class='name'>datasource</span>
                   <span class='arguments'>(name, options = {})</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000038-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000043-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000038-source'>    <span class="ruby-comment cmt"># File lib/rrd/builder.rb, line 18</span>&#x000A;18:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">datasource</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span> = {})&#x000A;19:       <span class="ruby-identifier">options</span> = {<span class="ruby-identifier">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:gauge</span>, <span class="ruby-identifier">:heartbeat</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>.<span class="ruby-identifier">minutes</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:unlimited</span>}.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">options</span>&#x000A;20:       <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:max</span>] = <span class="ruby-value str">&quot;U&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:max</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">:unlimited</span>&#x000A;21:       <span class="ruby-identifier">datasource</span> = <span class="ruby-node">&quot;DS:#{name}:#{options[:type].to_s.upcase}:#{options[:heartbeat]}:#{options[:min]}:#{options[:max]}&quot;</span>&#x000A;22:       <span class="ruby-identifier">datasources</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">datasource</span>&#x000A;23:       <span class="ruby-identifier">datasource</span>&#x000A;24:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000043-source'>    <span class="ruby-comment cmt"># File lib/rrd/builder.rb, line 18</span>&#x000A;18:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">datasource</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span> = {})&#x000A;19:       <span class="ruby-identifier">options</span> = {<span class="ruby-identifier">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:gauge</span>, <span class="ruby-identifier">:heartbeat</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>.<span class="ruby-identifier">minutes</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:unlimited</span>}.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">options</span>&#x000A;20:       <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:max</span>] = <span class="ruby-value str">&quot;U&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:max</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">:unlimited</span>&#x000A;21:       <span class="ruby-identifier">datasource</span> = <span class="ruby-node">&quot;DS:#{name}:#{options[:type].to_s.upcase}:#{options[:heartbeat]}:#{options[:min]}:#{options[:max]}&quot;</span>&#x000A;22:       <span class="ruby-identifier">datasources</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">datasource</span>&#x000A;23:       <span class="ruby-identifier">datasource</span>&#x000A;24:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000040'>
-                <a name='M000040'></a>
+              <div class='method public-instance' id='method-M000045'>
+                <a name='M000045'></a>
                 <div class='synopsis'>
                   <span class='name'>save</span>
                   <span class='arguments'>()</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000040-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000045-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000040-source'>    <span class="ruby-comment cmt"># File lib/rrd/builder.rb, line 35</span>&#x000A;35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">save</span>&#x000A;36:       <span class="ruby-identifier">args</span> = [<span class="ruby-identifier">output</span>]&#x000A;37:       <span class="ruby-identifier">line_parameters</span> = <span class="ruby-constant">RRD</span>.<span class="ruby-identifier">to_line_parameters</span>(<span class="ruby-identifier">parameters</span>)&#x000A;38:       <span class="ruby-identifier">args</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">line_parameters</span>&#x000A;39:       <span class="ruby-identifier">args</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">datasources</span>&#x000A;40:       <span class="ruby-identifier">args</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">archives</span>&#x000A;41:       &#x000A;42:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">create</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)&#x000A;43:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000045-source'>    <span class="ruby-comment cmt"># File lib/rrd/builder.rb, line 35</span>&#x000A;35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">save</span>&#x000A;36:       <span class="ruby-identifier">args</span> = [<span class="ruby-identifier">output</span>]&#x000A;37:       <span class="ruby-identifier">line_parameters</span> = <span class="ruby-constant">RRD</span>.<span class="ruby-identifier">to_line_parameters</span>(<span class="ruby-identifier">parameters</span>)&#x000A;38:       <span class="ruby-identifier">args</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">line_parameters</span>&#x000A;39:       <span class="ruby-identifier">args</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">datasources</span>&#x000A;40:       <span class="ruby-identifier">args</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">archives</span>&#x000A;41:       &#x000A;42:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">create</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)&#x000A;43:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
             </div>

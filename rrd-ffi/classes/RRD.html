@@ -77,13 +77,13 @@
                 <a name='M000015'></a>
                 <div class='synopsis'>
                   <span class='name'>graph</span>
-                  <span class='arguments'>(image_file, options, &amp;block)</span>
+                  <span class='arguments'>(image_file, options = {}, &amp;block)</span>
                 </div>
                 <div class='source'>
                   <a class='source-toggle' href='#' onclick="toggleCode('M000015-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000015-source'>    <span class="ruby-comment cmt"># File lib/rrd.rb, line 12</span>&#x000A;12:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">graph</span>(<span class="ruby-identifier">image_file</span>, <span class="ruby-identifier">options</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;13:     <span class="ruby-identifier">graph</span> = <span class="ruby-constant">Graph</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">image_file</span>, <span class="ruby-identifier">options</span>)&#x000A;14:     <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;15:     <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">save</span>&#x000A;16:   <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000015-source'>    <span class="ruby-comment cmt"># File lib/rrd.rb, line 12</span>&#x000A;12:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">graph</span>(<span class="ruby-identifier">image_file</span>, <span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;13:     <span class="ruby-identifier">graph</span> = <span class="ruby-constant">Graph</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">image_file</span>, <span class="ruby-identifier">options</span>)&#x000A;14:     <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;15:     <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">save</span>&#x000A;16:   <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
               <div class='method public-instance' id='method-M000016'>
