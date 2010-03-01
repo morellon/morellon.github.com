@@ -55,7 +55,8 @@
             <h2>Methods</h2>
             <h3>public class</h3>
             <ol>
-              <li><a href="#M000030">bang</a></li>
+              <li><a href="#M000031">bang</a></li>
+              <li><a href="#M000027">clear_error</a></li>
               <li><a href="#M000018">create</a></li>
               <li><a href="#M000017">detect_rrd_lib</a></li>
               <li><a href="#M000026">error</a></li>
@@ -64,9 +65,9 @@
               <li><a href="#M000025">graph</a></li>
               <li><a href="#M000021">info</a></li>
               <li><a href="#M000023">last</a></li>
-              <li><a href="#M000029">method_missing</a></li>
-              <li><a href="#M000027">methods</a></li>
-              <li><a href="#M000028">respond_to?</a></li>
+              <li><a href="#M000030">method_missing</a></li>
+              <li><a href="#M000028">methods</a></li>
+              <li><a href="#M000029">respond_to?</a></li>
               <li><a href="#M000024">restore</a></li>
               <li><a href="#M000019">update</a></li>
             </ol>
@@ -97,17 +98,30 @@
             </div>
             <div id='methods'>
               <h2>Public class methods</h2>
-              <div class='method public-class' id='method-M000030'>
-                <a name='M000030'></a>
+              <div class='method public-class' id='method-M000031'>
+                <a name='M000031'></a>
                 <div class='synopsis'>
                   <span class='name'>bang</span>
                   <span class='arguments'>(method, *args)</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000030-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000031-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000030-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 183</span>&#x000A;183:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bang</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)&#x000A;184:         <span class="ruby-identifier">result</span> = <span class="ruby-identifier">send</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)&#x000A;185:         <span class="ruby-identifier">raise</span> <span class="ruby-identifier">error</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>&#x000A;186:         <span class="ruby-identifier">result</span>&#x000A;187:       <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000031-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 185</span>&#x000A;185:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bang</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)&#x000A;186:         <span class="ruby-identifier">result</span> = <span class="ruby-identifier">send</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)&#x000A;187:         <span class="ruby-identifier">raise</span> <span class="ruby-identifier">error</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>&#x000A;188:         <span class="ruby-identifier">result</span>&#x000A;189:       <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-M000027'>
+                <a name='M000027'></a>
+                <div class='synopsis'>
+                  <span class='name'>clear_error</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000027-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000027-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 168</span>&#x000A;168:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clear_error</span>&#x000A;169:         <span class="ruby-identifier">rrd_clear_error</span>&#x000A;170:       <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
               <div class='method public-class' id='method-M000018'>
@@ -151,7 +165,7 @@
                   <a class='source-toggle' href='#' onclick="toggleCode('M000026-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000026-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 164</span>&#x000A;164:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">error</span>&#x000A;165:         <span class="ruby-identifier">error</span> = <span class="ruby-identifier">rrd_get_error</span>&#x000A;166:         <span class="ruby-identifier">rrd_clear_error</span>&#x000A;167:         <span class="ruby-identifier">error</span>&#x000A;168:       <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000026-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 164</span>&#x000A;164:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">error</span>&#x000A;165:         <span class="ruby-identifier">rrd_get_error</span>&#x000A;166:       <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
               <div class='method public-class' id='method-M000020'>
@@ -258,43 +272,43 @@
                   <pre id='M000023-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 141</span>&#x000A;141:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">last</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)&#x000A;142:         <span class="ruby-identifier">argv</span> = <span class="ruby-identifier">to_pointer</span>([<span class="ruby-value str">&quot;last&quot;</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">args</span>)&#x000A;143:         <span class="ruby-identifier">date</span> = <span class="ruby-identifier">rrd_last</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>, <span class="ruby-identifier">argv</span>)&#x000A;144:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">date</span> <span class="ruby-operator">==</span> <span class="ruby-value">-1</span>&#x000A;145:         <span class="ruby-identifier">date</span>&#x000A;146:       <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-class' id='method-M000029'>
-                <a name='M000029'></a>
+              <div class='method public-class' id='method-M000030'>
+                <a name='M000030'></a>
                 <div class='synopsis'>
                   <span class='name'>method_missing</span>
                   <span class='arguments'>(method, *args)</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000029-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000030-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000029-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 178</span>&#x000A;178:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)&#x000A;179:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">bang</span>(<span class="ruby-identifier">$1</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^(.+)!$/</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">BANG_METHODS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_sym</span>)&#x000A;180:         <span class="ruby-keyword kw">super</span>&#x000A;181:       <span class="ruby-keyword kw">end</span></pre>
-                </div>
-              </div>
-              <div class='method public-class' id='method-M000027'>
-                <a name='M000027'></a>
-                <div class='synopsis'>
-                  <span class='name'>methods</span>
-                  <span class='arguments'>()</span>
-                </div>
-                <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000027-source'); return false">
-                    [show source]
-                  </a>
-                  <pre id='M000027-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 170</span>&#x000A;170:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">methods</span>&#x000A;171:         <span class="ruby-keyword kw">super</span> <span class="ruby-operator">+</span> <span class="ruby-constant">BANG_METHODS</span>&#x000A;172:       <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000030-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 180</span>&#x000A;180:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)&#x000A;181:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">bang</span>(<span class="ruby-identifier">$1</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^(.+)!$/</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">BANG_METHODS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_sym</span>)&#x000A;182:         <span class="ruby-keyword kw">super</span>&#x000A;183:       <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
               <div class='method public-class' id='method-M000028'>
                 <a name='M000028'></a>
                 <div class='synopsis'>
-                  <span class='name'>respond_to?</span>
-                  <span class='arguments'>(method, include_private = false)</span>
+                  <span class='name'>methods</span>
+                  <span class='arguments'>()</span>
                 </div>
                 <div class='source'>
                   <a class='source-toggle' href='#' onclick="toggleCode('M000028-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000028-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 174</span>&#x000A;174:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">include_private</span> = <span class="ruby-keyword kw">false</span>)&#x000A;175:         <span class="ruby-keyword kw">super</span> <span class="ruby-operator">||</span> <span class="ruby-constant">BANG_METHODS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_sym</span>)&#x000A;176:       <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000028-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 172</span>&#x000A;172:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">methods</span>&#x000A;173:         <span class="ruby-keyword kw">super</span> <span class="ruby-operator">+</span> <span class="ruby-constant">BANG_METHODS</span>&#x000A;174:       <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-M000029'>
+                <a name='M000029'></a>
+                <div class='synopsis'>
+                  <span class='name'>respond_to?</span>
+                  <span class='arguments'>(method, include_private = false)</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000029-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000029-source'>     <span class="ruby-comment cmt"># File lib/rrd/wrapper.rb, line 176</span>&#x000A;176:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">include_private</span> = <span class="ruby-keyword kw">false</span>)&#x000A;177:         <span class="ruby-keyword kw">super</span> <span class="ruby-operator">||</span> <span class="ruby-constant">BANG_METHODS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_sym</span>)&#x000A;178:       <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
               <div class='method public-class' id='method-M000024'>
