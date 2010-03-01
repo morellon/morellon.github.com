@@ -203,7 +203,7 @@
                 <a name='M000057'></a>
                 <div class='synopsis'>
                   <span class='name'>restore</span>
-                  <span class='arguments'>(xml_file)</span>
+                  <span class='arguments'>(xml_file, options = {})</span>
                 </div>
                 <div class='description'>
                   <p>
@@ -214,7 +214,7 @@
                   <a class='source-toggle' href='#' onclick="toggleCode('M000057-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000057-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 60</span>&#x000A;60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">restore</span>(<span class="ruby-identifier">xml_file</span>)&#x000A;61:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-identifier">xml_file</span>, <span class="ruby-identifier">rrd_file</span>)&#x000A;62:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000057-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 60</span>&#x000A;60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">restore</span>(<span class="ruby-identifier">xml_file</span>, <span class="ruby-identifier">options</span> = {})&#x000A;61:       <span class="ruby-identifier">line_params</span> = []&#x000A;62:       <span class="ruby-identifier">line_params</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;--force-overwrite&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:overwrite</span>]&#x000A;63:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-identifier">xml_file</span>, <span class="ruby-identifier">rrd_file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">line_params</span>)&#x000A;64:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
               <div class='method public-instance' id='method-M000053'>
