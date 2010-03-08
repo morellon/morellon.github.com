@@ -4331,59 +4331,69 @@
         
         Element.addMethods();
         var search_index = [
-          { method: 'archive', module: 'rrd::builder', html: '<a href="classes/RRD/Builder.html#M000045"><span class="method_name">archive</span> <span class="module_name">(RRD::Builder)</span></a>' },
-          { method: 'area', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000041"><span class="method_name">area</span> <span class="module_name">(RRD::Graph)</span></a>' },
-          { method: 'bang', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000031"><span class="method_name">bang</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'clear_error', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000027"><span class="method_name">clear_error</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'create', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000049"><span class="method_name">create</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'create', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000018"><span class="method_name">create</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'datasource', module: 'rrd::builder', html: '<a href="classes/RRD/Builder.html#M000044"><span class="method_name">datasource</span> <span class="module_name">(RRD::Builder)</span></a>' },
+          { method: 'archive', module: 'rrd::builder', html: '<a href="classes/RRD/Builder.html#M000050"><span class="method_name">archive</span> <span class="module_name">(RRD::Builder)</span></a>' },
+          { method: 'area', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000046"><span class="method_name">area</span> <span class="module_name">(RRD::Graph)</span></a>' },
+          { method: 'bang', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000067"><span class="method_name">bang</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'bang', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000036"><span class="method_name">bang</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'bang', module: 'rrd', html: '<a href="classes/RRD.html#M000019"><span class="method_name">bang</span> <span class="module_name">(RRD)</span></a>' },
+          { method: 'clear_error', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000034"><span class="method_name">clear_error</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'create', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000054"><span class="method_name">create</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'create', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000021"><span class="method_name">create</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'datasource', module: 'rrd::builder', html: '<a href="classes/RRD/Builder.html#M000049"><span class="method_name">datasource</span> <span class="module_name">(RRD::Builder)</span></a>' },
           { method: 'day', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000007"><span class="method_name">day</span> <span class="module_name">(Fixnum)</span></a>' },
           { method: 'days', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000008"><span class="method_name">days</span> <span class="module_name">(Fixnum)</span></a>' },
-          { method: 'detect_rrd_lib', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000017"><span class="method_name">detect_rrd_lib</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'draw_area', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000039"><span class="method_name">draw_area</span> <span class="module_name">(RRD::Graph)</span></a>' },
-          { method: 'draw_line', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000038"><span class="method_name">draw_line</span> <span class="module_name">(RRD::Graph)</span></a>' },
-          { method: 'ends_at', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000055"><span class="method_name">ends_at</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'error', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000026"><span class="method_name">error</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'error', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000048"><span class="method_name">error</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'fetch', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000020"><span class="method_name">fetch</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'fetch', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000051"><span class="method_name">fetch</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'first', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000054"><span class="method_name">first</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'first', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000022"><span class="method_name">first</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'for_rrd_data', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000033"><span class="method_name">for_rrd_data</span> <span class="module_name">(RRD::Graph)</span></a>' },
-          { method: 'graph', module: 'rrd', html: '<a href="classes/RRD.html#M000015"><span class="method_name">graph</span> <span class="module_name">(RRD)</span></a>' },
+          { method: 'detect_rrd_lib', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000020"><span class="method_name">detect_rrd_lib</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'draw_area', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000044"><span class="method_name">draw_area</span> <span class="module_name">(RRD::Graph)</span></a>' },
+          { method: 'draw_line', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000043"><span class="method_name">draw_line</span> <span class="module_name">(RRD::Graph)</span></a>' },
+          { method: 'dump', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000055"><span class="method_name">dump</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'dump', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000022"><span class="method_name">dump</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'ends_at', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000056"><span class="method_name">ends_at</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'error', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000053"><span class="method_name">error</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'error', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000033"><span class="method_name">error</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'error', module: 'rrd', html: '<a href="classes/RRD.html#M000016"><span class="method_name">error</span> <span class="module_name">(RRD)</span></a>' },
+          { method: 'fetch', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000023"><span class="method_name">fetch</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'fetch', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000058"><span class="method_name">fetch</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'first', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000064"><span class="method_name">first</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'first', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000024"><span class="method_name">first</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'for_rrd_data', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000038"><span class="method_name">for_rrd_data</span> <span class="module_name">(RRD::Graph)</span></a>' },
           { method: 'graph', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000025"><span class="method_name">graph</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'graph', module: 'rrd', html: '<a href="classes/RRD.html#M000015"><span class="method_name">graph</span> <span class="module_name">(RRD)</span></a>' },
           { method: 'hour', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000005"><span class="method_name">hour</span> <span class="module_name">(Fixnum)</span></a>' },
           { method: 'hours', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000006"><span class="method_name">hours</span> <span class="module_name">(Fixnum)</span></a>' },
-          { method: 'info', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000052"><span class="method_name">info</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'info', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000021"><span class="method_name">info</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'last', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000056"><span class="method_name">last</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'last', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000023"><span class="method_name">last</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'line', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000040"><span class="method_name">line</span> <span class="module_name">(RRD::Graph)</span></a>' },
-          { method: 'method_missing', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000030"><span class="method_name">method_missing</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'methods', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000028"><span class="method_name">methods</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'info', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000059"><span class="method_name">info</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'info', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000026"><span class="method_name">info</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'last', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000057"><span class="method_name">last</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'last', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000027"><span class="method_name">last</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'last_update', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000028"><span class="method_name">last_update</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'last_update', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000060"><span class="method_name">last_update</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'line', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000045"><span class="method_name">line</span> <span class="module_name">(RRD::Graph)</span></a>' },
+          { method: 'methods', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000066"><span class="method_name">methods</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'methods', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000035"><span class="method_name">methods</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'methods', module: 'rrd', html: '<a href="classes/RRD.html#M000018"><span class="method_name">methods</span> <span class="module_name">(RRD)</span></a>' },
           { method: 'minute', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000003"><span class="method_name">minute</span> <span class="module_name">(Fixnum)</span></a>' },
           { method: 'minutes', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000004"><span class="method_name">minutes</span> <span class="module_name">(Fixnum)</span></a>' },
           { method: 'month', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000011"><span class="method_name">month</span> <span class="module_name">(Fixnum)</span></a>' },
           { method: 'months', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000012"><span class="method_name">months</span> <span class="module_name">(Fixnum)</span></a>' },
-          { method: 'new', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000047"><span class="method_name">new</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'new', module: 'rrd::builder', html: '<a href="classes/RRD/Builder.html#M000043"><span class="method_name">new</span> <span class="module_name">(RRD::Builder)</span></a>' },
-          { method: 'new', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000032"><span class="method_name">new</span> <span class="module_name">(RRD::Graph)</span></a>' },
-          { method: 'print_comment', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000036"><span class="method_name">print_comment</span> <span class="module_name">(RRD::Graph)</span></a>' },
-          { method: 'print_value', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000037"><span class="method_name">print_value</span> <span class="module_name">(RRD::Graph)</span></a>' },
-          { method: 'respond_to?', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000029"><span class="method_name">respond_to?</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'restore', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000024"><span class="method_name">restore</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'restore', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000057"><span class="method_name">restore</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'save', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000042"><span class="method_name">save</span> <span class="module_name">(RRD::Graph)</span></a>' },
-          { method: 'save', module: 'rrd::builder', html: '<a href="classes/RRD/Builder.html#M000046"><span class="method_name">save</span> <span class="module_name">(RRD::Builder)</span></a>' },
+          { method: 'new', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000037"><span class="method_name">new</span> <span class="module_name">(RRD::Graph)</span></a>' },
+          { method: 'new', module: 'rrd::builder', html: '<a href="classes/RRD/Builder.html#M000048"><span class="method_name">new</span> <span class="module_name">(RRD::Builder)</span></a>' },
+          { method: 'new', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000052"><span class="method_name">new</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'print_comment', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000041"><span class="method_name">print_comment</span> <span class="module_name">(RRD::Graph)</span></a>' },
+          { method: 'print_value', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000042"><span class="method_name">print_value</span> <span class="module_name">(RRD::Graph)</span></a>' },
+          { method: 'resize', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000029"><span class="method_name">resize</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'resize', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000061"><span class="method_name">resize</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'restore', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000062"><span class="method_name">restore</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'restore', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000030"><span class="method_name">restore</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'save', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000047"><span class="method_name">save</span> <span class="module_name">(RRD::Graph)</span></a>' },
+          { method: 'save', module: 'rrd::builder', html: '<a href="classes/RRD/Builder.html#M000051"><span class="method_name">save</span> <span class="module_name">(RRD::Builder)</span></a>' },
           { method: 'second', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000001"><span class="method_name">second</span> <span class="module_name">(Fixnum)</span></a>' },
           { method: 'seconds', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000002"><span class="method_name">seconds</span> <span class="module_name">(Fixnum)</span></a>' },
-          { method: 'starts_at', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000053"><span class="method_name">starts_at</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'to_line_parameters', module: 'rrd', html: '<a href="classes/RRD.html#M000016"><span class="method_name">to_line_parameters</span> <span class="module_name">(RRD)</span></a>' },
-          { method: 'update', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000019"><span class="method_name">update</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
-          { method: 'update', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000050"><span class="method_name">update</span> <span class="module_name">(RRD::Base)</span></a>' },
-          { method: 'using_calculated_data', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000034"><span class="method_name">using_calculated_data</span> <span class="module_name">(RRD::Graph)</span></a>' },
-          { method: 'using_value', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000035"><span class="method_name">using_value</span> <span class="module_name">(RRD::Graph)</span></a>' },
+          { method: 'starts_at', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000063"><span class="method_name">starts_at</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'to_line_parameters', module: 'rrd', html: '<a href="classes/RRD.html#M000017"><span class="method_name">to_line_parameters</span> <span class="module_name">(RRD)</span></a>' },
+          { method: 'tune', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000031"><span class="method_name">tune</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'update', module: 'rrd::base', html: '<a href="classes/RRD/Base.html#M000065"><span class="method_name">update</span> <span class="module_name">(RRD::Base)</span></a>' },
+          { method: 'update', module: 'rrd::wrapper', html: '<a href="classes/RRD/Wrapper.html#M000032"><span class="method_name">update</span> <span class="module_name">(RRD::Wrapper)</span></a>' },
+          { method: 'using_calculated_data', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000039"><span class="method_name">using_calculated_data</span> <span class="module_name">(RRD::Graph)</span></a>' },
+          { method: 'using_value', module: 'rrd::graph', html: '<a href="classes/RRD/Graph.html#M000040"><span class="method_name">using_value</span> <span class="module_name">(RRD::Graph)</span></a>' },
           { method: 'week', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000009"><span class="method_name">week</span> <span class="module_name">(Fixnum)</span></a>' },
           { method: 'weeks', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000010"><span class="method_name">weeks</span> <span class="module_name">(Fixnum)</span></a>' },
           { method: 'year', module: 'fixnum', html: '<a href="classes/Fixnum.html#M000013"><span class="method_name">year</span> <span class="module_name">(Fixnum)</span></a>' },
@@ -4458,59 +4468,69 @@
       </form>
       <ol class='methods' id='search-results' style='display: none'></ol>
       <ol class='methods' id='index-entries'>
-        <li><a href="classes/RRD/Builder.html#M000045"><span class="method_name">archive</span> <span class="module_name">(RRD::Builder)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000041"><span class="method_name">area</span> <span class="module_name">(RRD::Graph)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000031"><span class="method_name">bang</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000027"><span class="method_name">clear_error</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000049"><span class="method_name">create</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000018"><span class="method_name">create</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Builder.html#M000044"><span class="method_name">datasource</span> <span class="module_name">(RRD::Builder)</span></a></li>
+        <li><a href="classes/RRD/Builder.html#M000050"><span class="method_name">archive</span> <span class="module_name">(RRD::Builder)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000046"><span class="method_name">area</span> <span class="module_name">(RRD::Graph)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000067"><span class="method_name">bang</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000036"><span class="method_name">bang</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD.html#M000019"><span class="method_name">bang</span> <span class="module_name">(RRD)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000034"><span class="method_name">clear_error</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000054"><span class="method_name">create</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000021"><span class="method_name">create</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Builder.html#M000049"><span class="method_name">datasource</span> <span class="module_name">(RRD::Builder)</span></a></li>
         <li><a href="classes/Fixnum.html#M000007"><span class="method_name">day</span> <span class="module_name">(Fixnum)</span></a></li>
         <li><a href="classes/Fixnum.html#M000008"><span class="method_name">days</span> <span class="module_name">(Fixnum)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000017"><span class="method_name">detect_rrd_lib</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000039"><span class="method_name">draw_area</span> <span class="module_name">(RRD::Graph)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000038"><span class="method_name">draw_line</span> <span class="module_name">(RRD::Graph)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000055"><span class="method_name">ends_at</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000026"><span class="method_name">error</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000048"><span class="method_name">error</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000020"><span class="method_name">fetch</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000051"><span class="method_name">fetch</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000054"><span class="method_name">first</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000022"><span class="method_name">first</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000033"><span class="method_name">for_rrd_data</span> <span class="module_name">(RRD::Graph)</span></a></li>
-        <li><a href="classes/RRD.html#M000015"><span class="method_name">graph</span> <span class="module_name">(RRD)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000020"><span class="method_name">detect_rrd_lib</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000044"><span class="method_name">draw_area</span> <span class="module_name">(RRD::Graph)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000043"><span class="method_name">draw_line</span> <span class="module_name">(RRD::Graph)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000055"><span class="method_name">dump</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000022"><span class="method_name">dump</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000056"><span class="method_name">ends_at</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000053"><span class="method_name">error</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000033"><span class="method_name">error</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD.html#M000016"><span class="method_name">error</span> <span class="module_name">(RRD)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000023"><span class="method_name">fetch</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000058"><span class="method_name">fetch</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000064"><span class="method_name">first</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000024"><span class="method_name">first</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000038"><span class="method_name">for_rrd_data</span> <span class="module_name">(RRD::Graph)</span></a></li>
         <li><a href="classes/RRD/Wrapper.html#M000025"><span class="method_name">graph</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD.html#M000015"><span class="method_name">graph</span> <span class="module_name">(RRD)</span></a></li>
         <li><a href="classes/Fixnum.html#M000005"><span class="method_name">hour</span> <span class="module_name">(Fixnum)</span></a></li>
         <li><a href="classes/Fixnum.html#M000006"><span class="method_name">hours</span> <span class="module_name">(Fixnum)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000052"><span class="method_name">info</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000021"><span class="method_name">info</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000056"><span class="method_name">last</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000023"><span class="method_name">last</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000040"><span class="method_name">line</span> <span class="module_name">(RRD::Graph)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000030"><span class="method_name">method_missing</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000028"><span class="method_name">methods</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000059"><span class="method_name">info</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000026"><span class="method_name">info</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000057"><span class="method_name">last</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000027"><span class="method_name">last</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000028"><span class="method_name">last_update</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000060"><span class="method_name">last_update</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000045"><span class="method_name">line</span> <span class="module_name">(RRD::Graph)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000066"><span class="method_name">methods</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000035"><span class="method_name">methods</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD.html#M000018"><span class="method_name">methods</span> <span class="module_name">(RRD)</span></a></li>
         <li><a href="classes/Fixnum.html#M000003"><span class="method_name">minute</span> <span class="module_name">(Fixnum)</span></a></li>
         <li><a href="classes/Fixnum.html#M000004"><span class="method_name">minutes</span> <span class="module_name">(Fixnum)</span></a></li>
         <li><a href="classes/Fixnum.html#M000011"><span class="method_name">month</span> <span class="module_name">(Fixnum)</span></a></li>
         <li><a href="classes/Fixnum.html#M000012"><span class="method_name">months</span> <span class="module_name">(Fixnum)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000047"><span class="method_name">new</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD/Builder.html#M000043"><span class="method_name">new</span> <span class="module_name">(RRD::Builder)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000032"><span class="method_name">new</span> <span class="module_name">(RRD::Graph)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000036"><span class="method_name">print_comment</span> <span class="module_name">(RRD::Graph)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000037"><span class="method_name">print_value</span> <span class="module_name">(RRD::Graph)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000029"><span class="method_name">respond_to?</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000024"><span class="method_name">restore</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000057"><span class="method_name">restore</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000042"><span class="method_name">save</span> <span class="module_name">(RRD::Graph)</span></a></li>
-        <li><a href="classes/RRD/Builder.html#M000046"><span class="method_name">save</span> <span class="module_name">(RRD::Builder)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000037"><span class="method_name">new</span> <span class="module_name">(RRD::Graph)</span></a></li>
+        <li><a href="classes/RRD/Builder.html#M000048"><span class="method_name">new</span> <span class="module_name">(RRD::Builder)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000052"><span class="method_name">new</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000041"><span class="method_name">print_comment</span> <span class="module_name">(RRD::Graph)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000042"><span class="method_name">print_value</span> <span class="module_name">(RRD::Graph)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000029"><span class="method_name">resize</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000061"><span class="method_name">resize</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000062"><span class="method_name">restore</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000030"><span class="method_name">restore</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000047"><span class="method_name">save</span> <span class="module_name">(RRD::Graph)</span></a></li>
+        <li><a href="classes/RRD/Builder.html#M000051"><span class="method_name">save</span> <span class="module_name">(RRD::Builder)</span></a></li>
         <li><a href="classes/Fixnum.html#M000001"><span class="method_name">second</span> <span class="module_name">(Fixnum)</span></a></li>
         <li><a href="classes/Fixnum.html#M000002"><span class="method_name">seconds</span> <span class="module_name">(Fixnum)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000053"><span class="method_name">starts_at</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD.html#M000016"><span class="method_name">to_line_parameters</span> <span class="module_name">(RRD)</span></a></li>
-        <li><a href="classes/RRD/Wrapper.html#M000019"><span class="method_name">update</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
-        <li><a href="classes/RRD/Base.html#M000050"><span class="method_name">update</span> <span class="module_name">(RRD::Base)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000034"><span class="method_name">using_calculated_data</span> <span class="module_name">(RRD::Graph)</span></a></li>
-        <li><a href="classes/RRD/Graph.html#M000035"><span class="method_name">using_value</span> <span class="module_name">(RRD::Graph)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000063"><span class="method_name">starts_at</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD.html#M000017"><span class="method_name">to_line_parameters</span> <span class="module_name">(RRD)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000031"><span class="method_name">tune</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Base.html#M000065"><span class="method_name">update</span> <span class="module_name">(RRD::Base)</span></a></li>
+        <li><a href="classes/RRD/Wrapper.html#M000032"><span class="method_name">update</span> <span class="module_name">(RRD::Wrapper)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000039"><span class="method_name">using_calculated_data</span> <span class="module_name">(RRD::Graph)</span></a></li>
+        <li><a href="classes/RRD/Graph.html#M000040"><span class="method_name">using_value</span> <span class="module_name">(RRD::Graph)</span></a></li>
         <li><a href="classes/Fixnum.html#M000009"><span class="method_name">week</span> <span class="module_name">(Fixnum)</span></a></li>
         <li><a href="classes/Fixnum.html#M000010"><span class="method_name">weeks</span> <span class="module_name">(Fixnum)</span></a></li>
         <li><a href="classes/Fixnum.html#M000013"><span class="method_name">year</span> <span class="module_name">(Fixnum)</span></a></li>

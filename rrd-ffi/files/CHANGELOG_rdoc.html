@@ -31,22 +31,60 @@
         </div>
         <div class='last-update'>
           Last Update:
-          <span class='datetime'>Mon Mar 01 14:35:00 -0300 2010</span>
+          <span class='datetime'>Mon Mar 08 14:47:37 -0300 2010</span>
         </div>
       </div>
       <div id='content'>
         <div id='text'>
           <div id='description'>
             <h1>Changelog</h1>
-            <h2>TODO: version 0.2.2</h2>
+            <h2>FUTURE:</h2>
             <ul>
-            <li>TODO: bang methods to base
+            <li>TODO: Validations
+            
+            </li>
+            <li>TODO: Better error messages
             
             </li>
             <li>TODO: Improve documentation
             
             </li>
-            <li>TODO: add more rrd functions (dump, tune, xport, resize)
+            <li>TODO: add more rrd functions (xport). Any other missing?
+            
+            </li>
+            <li>TODO: Add memory leak test
+            
+            </li>
+            <li>TODO: Add tune methods to <a href="../classes/RRD/Base.html">RRD::Base</a>
+            instance
+            
+            </li>
+            </ul>
+            <h2>2010-03-08 version 0.2.2</h2>
+            <ul>
+            <li>Fixed memory leak on <a href="../classes/RRD/Wrapper.html">RRD::Wrapper</a>
+            (info, graph, last_update, fetch)
+            
+            </li>
+            <li>Added graph! to <a href="../classes/RRD.html">RRD</a>
+            
+            </li>
+            <li>Added bang methods to base
+            
+            </li>
+            <li>Added dump, last_update, resize methods to <a
+            href="../classes/RRD/Base.html">RRD::Base</a> instance
+            
+            </li>
+            <li>Added dump, tune, resize, last_update methods to <a
+            href="../classes/RRD/Wrapper.html">RRD::Wrapper</a>
+            
+            </li>
+            <li>Escape &#8217;:&#8217; on graph label
+            
+            </li>
+            <li>Added flags to be used on <a href="../classes/RRD/Base.html">RRD::Base</a>
+            instances and for building graphs
             
             </li>
             </ul>
