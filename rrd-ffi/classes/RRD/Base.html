@@ -50,25 +50,25 @@
             <h2>Methods</h2>
             <h3>public class</h3>
             <ol>
-              <li><a href="#M000052">new</a></li>
+              <li><a href="#M000038">new</a></li>
             </ol>
             <h3>public instance</h3>
             <ol>
-              <li><a href="#M000067">bang</a></li>
-              <li><a href="#M000054">create</a></li>
-              <li><a href="#M000055">dump</a></li>
-              <li><a href="#M000056">ends_at</a></li>
-              <li><a href="#M000053">error</a></li>
-              <li><a href="#M000058">fetch</a></li>
-              <li><a href="#M000064">first</a></li>
-              <li><a href="#M000059">info</a></li>
-              <li><a href="#M000057">last</a></li>
-              <li><a href="#M000060">last_update</a></li>
-              <li><a href="#M000066">methods</a></li>
-              <li><a href="#M000061">resize</a></li>
-              <li><a href="#M000062">restore</a></li>
-              <li><a href="#M000063">starts_at</a></li>
-              <li><a href="#M000065">update</a></li>
+              <li><a href="#M000053">bang</a></li>
+              <li><a href="#M000040">create</a></li>
+              <li><a href="#M000041">dump</a></li>
+              <li><a href="#M000042">ends_at</a></li>
+              <li><a href="#M000039">error</a></li>
+              <li><a href="#M000044">fetch</a></li>
+              <li><a href="#M000050">first</a></li>
+              <li><a href="#M000045">info</a></li>
+              <li><a href="#M000043">last</a></li>
+              <li><a href="#M000046">last_update</a></li>
+              <li><a href="#M000052">methods</a></li>
+              <li><a href="#M000047">resize</a></li>
+              <li><a href="#M000048">restore</a></li>
+              <li><a href="#M000049">starts_at</a></li>
+              <li><a href="#M000051">update</a></li>
             </ol>
           </div>
           <div id='section'>
@@ -108,35 +108,35 @@
             </div>
             <div id='methods'>
               <h2>Public class methods</h2>
-              <div class='method public-class' id='method-M000052'>
-                <a name='M000052'></a>
+              <div class='method public-class' id='method-M000038'>
+                <a name='M000038'></a>
                 <div class='synopsis'>
                   <span class='name'>new</span>
                   <span class='arguments'>(rrd_file)</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000052-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000038-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000052-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 11</span>&#x000A;11:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">rrd_file</span>)&#x000A;12:       <span class="ruby-ivar">@rrd_file</span> = <span class="ruby-identifier">rrd_file</span>&#x000A;13:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000038-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 11</span>&#x000A;11:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">rrd_file</span>)&#x000A;12:       <span class="ruby-ivar">@rrd_file</span> = <span class="ruby-identifier">rrd_file</span>&#x000A;13:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
               <h2>Public instance methods</h2>
-              <div class='method public-instance' id='method-M000067'>
-                <a name='M000067'></a>
+              <div class='method public-instance' id='method-M000053'>
+                <a name='M000053'></a>
                 <div class='synopsis'>
                   <span class='name'>bang</span>
                   <span class='arguments'>(method, *args, &amp;block)</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000067-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000053-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000067-source'>     <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 106</span>&#x000A;106:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bang</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;107:       <span class="ruby-identifier">result</span> = <span class="ruby-identifier">send</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;108:       <span class="ruby-identifier">raise</span> <span class="ruby-identifier">error</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>&#x000A;109:       <span class="ruby-identifier">result</span>&#x000A;110:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000053-source'>     <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 106</span>&#x000A;106:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bang</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;107:       <span class="ruby-identifier">result</span> = <span class="ruby-identifier">send</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;108:       <span class="ruby-identifier">raise</span> <span class="ruby-identifier">error</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>&#x000A;109:       <span class="ruby-identifier">result</span>&#x000A;110:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000054'>
-                <a name='M000054'></a>
+              <div class='method public-instance' id='method-M000040'>
+                <a name='M000040'></a>
                 <div class='synopsis'>
                   <span class='name'>create</span>
                   <span class='arguments'>(options = {}, &amp;block)</span>
@@ -148,27 +148,27 @@
                   <pre>rrd.create :start =&gt; Time.now - 10.seconds, :step =&gt; 5.minutes do&#x000A;  datasource &quot;memory&quot;, :type =&gt; :gauge, :heartbeat =&gt; 10.minutes, :min =&gt; 0, :max =&gt; :unlimited&#x000A;  archive :average, :every =&gt; 10.minutes, :during =&gt; 1.year&#x000A;end</pre>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000054-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000040-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000054-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 24</span>&#x000A;24:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create</span>(<span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;25:       <span class="ruby-identifier">builder</span> = <span class="ruby-constant">RRD</span><span class="ruby-operator">::</span><span class="ruby-constant">Builder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">rrd_file</span>, <span class="ruby-identifier">options</span>)&#x000A;26:       <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;27:       <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">save</span>&#x000A;28:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000040-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 24</span>&#x000A;24:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create</span>(<span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;25:       <span class="ruby-identifier">builder</span> = <span class="ruby-constant">RRD</span><span class="ruby-operator">::</span><span class="ruby-constant">Builder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">rrd_file</span>, <span class="ruby-identifier">options</span>)&#x000A;26:       <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;27:       <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">save</span>&#x000A;28:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000055'>
-                <a name='M000055'></a>
+              <div class='method public-instance' id='method-M000041'>
+                <a name='M000041'></a>
                 <div class='synopsis'>
                   <span class='name'>dump</span>
                   <span class='arguments'>(xml_file, options = {})</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000055-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000041-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000055-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 30</span>&#x000A;30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dump</span>(<span class="ruby-identifier">xml_file</span>, <span class="ruby-identifier">options</span> = {})&#x000A;31:       <span class="ruby-identifier">options</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">clone</span>&#x000A;32:       <span class="ruby-identifier">line_params</span> = <span class="ruby-constant">RRD</span>.<span class="ruby-identifier">to_line_parameters</span>(<span class="ruby-identifier">options</span>, <span class="ruby-constant">DUMP_FLAGS</span>)&#x000A;33:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">rrd_file</span>, <span class="ruby-identifier">xml_file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">line_params</span>)&#x000A;34:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000041-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 30</span>&#x000A;30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dump</span>(<span class="ruby-identifier">xml_file</span>, <span class="ruby-identifier">options</span> = {})&#x000A;31:       <span class="ruby-identifier">options</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">clone</span>&#x000A;32:       <span class="ruby-identifier">line_params</span> = <span class="ruby-constant">RRD</span>.<span class="ruby-identifier">to_line_parameters</span>(<span class="ruby-identifier">options</span>, <span class="ruby-constant">DUMP_FLAGS</span>)&#x000A;33:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">rrd_file</span>, <span class="ruby-identifier">xml_file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">line_params</span>)&#x000A;34:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000056'>
-                <a name='M000056'></a>
+              <div class='method public-instance' id='method-M000042'>
+                <a name='M000042'></a>
                 <div class='synopsis'>
                   <span class='name'>ends_at</span>
                   <span class='arguments'>()</span>
@@ -179,27 +179,27 @@
                   </p>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000056-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000042-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000056-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 37</span>&#x000A;37:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ends_at</span>&#x000A;38:       <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span> <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">last</span>(<span class="ruby-identifier">rrd_file</span>)&#x000A;39:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000042-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 37</span>&#x000A;37:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ends_at</span>&#x000A;38:       <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span> <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">last</span>(<span class="ruby-identifier">rrd_file</span>)&#x000A;39:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000053'>
-                <a name='M000053'></a>
+              <div class='method public-instance' id='method-M000039'>
+                <a name='M000039'></a>
                 <div class='synopsis'>
                   <span class='name'>error</span>
                   <span class='arguments'>()</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000053-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000039-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000053-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 15</span>&#x000A;15:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">error</span>&#x000A;16:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">error</span>&#x000A;17:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000039-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 15</span>&#x000A;15:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">error</span>&#x000A;16:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">error</span>&#x000A;17:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000058'>
-                <a name='M000058'></a>
+              <div class='method public-instance' id='method-M000044'>
+                <a name='M000044'></a>
                 <div class='synopsis'>
                   <span class='name'>fetch</span>
                   <span class='arguments'>(consolidation_function, options = {})</span>
@@ -210,87 +210,87 @@
                   </p>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000058-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000044-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000058-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 44</span>&#x000A;44:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">consolidation_function</span>, <span class="ruby-identifier">options</span> = {})&#x000A;45:       <span class="ruby-identifier">options</span> = {<span class="ruby-identifier">:start</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">day</span>, <span class="ruby-identifier">:end</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>}.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">options</span>&#x000A;46:       &#x000A;47:       <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:start</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:start</span>].<span class="ruby-identifier">to_i</span>&#x000A;48:       <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:end</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:end</span>].<span class="ruby-identifier">to_i</span>&#x000A;49:       <span class="ruby-identifier">line_params</span> = <span class="ruby-constant">RRD</span>.<span class="ruby-identifier">to_line_parameters</span>(<span class="ruby-identifier">options</span>)&#x000A;50:       &#x000A;51:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">rrd_file</span>, <span class="ruby-identifier">consolidation_function</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">upcase</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">line_params</span>)&#x000A;52:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000044-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 44</span>&#x000A;44:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">consolidation_function</span>, <span class="ruby-identifier">options</span> = {})&#x000A;45:       <span class="ruby-identifier">options</span> = {<span class="ruby-identifier">:start</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">day</span>, <span class="ruby-identifier">:end</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>}.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">options</span>&#x000A;46:       &#x000A;47:       <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:start</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:start</span>].<span class="ruby-identifier">to_i</span>&#x000A;48:       <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:end</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:end</span>].<span class="ruby-identifier">to_i</span>&#x000A;49:       <span class="ruby-identifier">line_params</span> = <span class="ruby-constant">RRD</span>.<span class="ruby-identifier">to_line_parameters</span>(<span class="ruby-identifier">options</span>)&#x000A;50:       &#x000A;51:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">rrd_file</span>, <span class="ruby-identifier">consolidation_function</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">upcase</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">line_params</span>)&#x000A;52:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000064'>
-                <a name='M000064'></a>
+              <div class='method public-instance' id='method-M000050'>
+                <a name='M000050'></a>
                 <div class='synopsis'>
                   <span class='name'>first</span>
                   <span class='arguments'>()</span>
                 </div>
                 <div class='description'>
                   <p>
-                  Alias for <a href="Base.html#M000063">starts_at</a>
+                  Alias for <a href="Base.html#M000049">starts_at</a>
                   </p>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000059'>
-                <a name='M000059'></a>
+              <div class='method public-instance' id='method-M000045'>
+                <a name='M000045'></a>
                 <div class='synopsis'>
                   <span class='name'>info</span>
                   <span class='arguments'>()</span>
                 </div>
                 <div class='description'>
                   <p>
-                  See <a href="Wrapper.html#M000026">RRD::Wrapper.info</a>
+                  See <a href="Wrapper.html#M000012">RRD::Wrapper.info</a>
                   </p>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000059-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000045-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000059-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 55</span>&#x000A;55:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">info</span>&#x000A;56:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">info</span>(<span class="ruby-identifier">rrd_file</span>)&#x000A;57:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000045-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 55</span>&#x000A;55:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">info</span>&#x000A;56:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">info</span>(<span class="ruby-identifier">rrd_file</span>)&#x000A;57:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000057'>
-                <a name='M000057'></a>
+              <div class='method public-instance' id='method-M000043'>
+                <a name='M000043'></a>
                 <div class='synopsis'>
                   <span class='name'>last</span>
                   <span class='arguments'>()</span>
                 </div>
                 <div class='description'>
                   <p>
-                  Alias for <a href="Base.html#M000056">ends_at</a>
+                  Alias for <a href="Base.html#M000042">ends_at</a>
                   </p>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000060'>
-                <a name='M000060'></a>
+              <div class='method public-instance' id='method-M000046'>
+                <a name='M000046'></a>
                 <div class='synopsis'>
                   <span class='name'>last_update</span>
                   <span class='arguments'>()</span>
                 </div>
                 <div class='description'>
                   <p>
-                  See <a href="Wrapper.html#M000028">RRD::Wrapper.last_update</a>
+                  See <a href="Wrapper.html#M000014">RRD::Wrapper.last_update</a>
                   </p>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000060-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000046-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000060-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 60</span>&#x000A;60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">last_update</span>&#x000A;61:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">last_update</span>(<span class="ruby-identifier">rrd_file</span>)&#x000A;62:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000046-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 60</span>&#x000A;60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">last_update</span>&#x000A;61:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">last_update</span>(<span class="ruby-identifier">rrd_file</span>)&#x000A;62:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000066'>
-                <a name='M000066'></a>
+              <div class='method public-instance' id='method-M000052'>
+                <a name='M000052'></a>
                 <div class='synopsis'>
                   <span class='name'>methods</span>
                   <span class='arguments'>()</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000066-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000052-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000066-source'>     <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 102</span>&#x000A;102:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">methods</span>&#x000A;103:       <span class="ruby-keyword kw">super</span> <span class="ruby-operator">+</span> <span class="ruby-constant">BANG_METHODS</span>&#x000A;104:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000052-source'>     <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 102</span>&#x000A;102:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">methods</span>&#x000A;103:       <span class="ruby-keyword kw">super</span> <span class="ruby-operator">+</span> <span class="ruby-constant">BANG_METHODS</span>&#x000A;104:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000061'>
-                <a name='M000061'></a>
+              <div class='method public-instance' id='method-M000047'>
+                <a name='M000047'></a>
                 <div class='synopsis'>
                   <span class='name'>resize</span>
                   <span class='arguments'>(rra_num, options)</span>
@@ -305,32 +305,32 @@
                   <pre>rrd.resize(0, :grow =&gt; 10.days)</pre>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000061-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000047-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000061-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 69</span>&#x000A;69:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resize</span>(<span class="ruby-identifier">rra_num</span>, <span class="ruby-identifier">options</span>)&#x000A;70:       <span class="ruby-identifier">info</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">info</span>&#x000A;71:       <span class="ruby-identifier">step</span> = <span class="ruby-identifier">info</span>[<span class="ruby-value str">&quot;step&quot;</span>]&#x000A;72:       <span class="ruby-identifier">rra_step</span> = <span class="ruby-identifier">info</span>[<span class="ruby-node">&quot;rra[#{rra_num}].pdp_per_row&quot;</span>]&#x000A;73:       <span class="ruby-identifier">action</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">upcase</span>&#x000A;74:       <span class="ruby-identifier">delta</span> = (<span class="ruby-identifier">options</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">step</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">rra_step</span>)).<span class="ruby-identifier">to_i</span> <span class="ruby-comment cmt"># Force an integer</span>&#x000A;75:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">resize</span>(<span class="ruby-identifier">rrd_file</span>, <span class="ruby-identifier">rra_num</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">action</span>, <span class="ruby-identifier">delta</span>.<span class="ruby-identifier">to_s</span>)&#x000A;76:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000047-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 69</span>&#x000A;69:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resize</span>(<span class="ruby-identifier">rra_num</span>, <span class="ruby-identifier">options</span>)&#x000A;70:       <span class="ruby-identifier">info</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">info</span>&#x000A;71:       <span class="ruby-identifier">step</span> = <span class="ruby-identifier">info</span>[<span class="ruby-value str">&quot;step&quot;</span>]&#x000A;72:       <span class="ruby-identifier">rra_step</span> = <span class="ruby-identifier">info</span>[<span class="ruby-node">&quot;rra[#{rra_num}].pdp_per_row&quot;</span>]&#x000A;73:       <span class="ruby-identifier">action</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">upcase</span>&#x000A;74:       <span class="ruby-identifier">delta</span> = (<span class="ruby-identifier">options</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">step</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">rra_step</span>)).<span class="ruby-identifier">to_i</span> <span class="ruby-comment cmt"># Force an integer</span>&#x000A;75:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">resize</span>(<span class="ruby-identifier">rrd_file</span>, <span class="ruby-identifier">rra_num</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">action</span>, <span class="ruby-identifier">delta</span>.<span class="ruby-identifier">to_s</span>)&#x000A;76:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000062'>
-                <a name='M000062'></a>
+              <div class='method public-instance' id='method-M000048'>
+                <a name='M000048'></a>
                 <div class='synopsis'>
                   <span class='name'>restore</span>
                   <span class='arguments'>(xml_file, options = {})</span>
                 </div>
                 <div class='description'>
                   <p>
-                  See <a href="Wrapper.html#M000030">RRD::Wrapper.restore</a>
+                  See <a href="Wrapper.html#M000016">RRD::Wrapper.restore</a>
                   </p>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000062-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000048-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000062-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 79</span>&#x000A;79:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">restore</span>(<span class="ruby-identifier">xml_file</span>, <span class="ruby-identifier">options</span> = {})&#x000A;80:       <span class="ruby-identifier">options</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">clone</span>&#x000A;81:       <span class="ruby-identifier">line_params</span> = <span class="ruby-constant">RRD</span>.<span class="ruby-identifier">to_line_parameters</span>(<span class="ruby-identifier">options</span>, <span class="ruby-constant">RESTORE_FLAGS</span>)&#x000A;82:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-identifier">xml_file</span>, <span class="ruby-identifier">rrd_file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">line_params</span>)&#x000A;83:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000048-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 79</span>&#x000A;79:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">restore</span>(<span class="ruby-identifier">xml_file</span>, <span class="ruby-identifier">options</span> = {})&#x000A;80:       <span class="ruby-identifier">options</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">clone</span>&#x000A;81:       <span class="ruby-identifier">line_params</span> = <span class="ruby-constant">RRD</span>.<span class="ruby-identifier">to_line_parameters</span>(<span class="ruby-identifier">options</span>, <span class="ruby-constant">RESTORE_FLAGS</span>)&#x000A;82:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-identifier">xml_file</span>, <span class="ruby-identifier">rrd_file</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">line_params</span>)&#x000A;83:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000063'>
-                <a name='M000063'></a>
+              <div class='method public-instance' id='method-M000049'>
+                <a name='M000049'></a>
                 <div class='synopsis'>
                   <span class='name'>starts_at</span>
                   <span class='arguments'>()</span>
@@ -341,14 +341,14 @@
                   </p>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000063-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000049-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000063-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 86</span>&#x000A;86:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">starts_at</span>&#x000A;87:       <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span> <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">rrd_file</span>)&#x000A;88:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000049-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 86</span>&#x000A;86:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">starts_at</span>&#x000A;87:       <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span> <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">rrd_file</span>)&#x000A;88:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='method public-instance' id='method-M000065'>
-                <a name='M000065'></a>
+              <div class='method public-instance' id='method-M000051'>
+                <a name='M000051'></a>
                 <div class='synopsis'>
                   <span class='name'>update</span>
                   <span class='arguments'>(time, *data)</span>
@@ -363,10 +363,10 @@
                   </p>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000065-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000051-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000065-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 94</span>&#x000A;94:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>(<span class="ruby-identifier">time</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">data</span>)&#x000A;95:       <span class="ruby-identifier">new_data</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-value">? </span><span class="ruby-value str">&quot;U&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">item</span>}&#x000A;96:       <span class="ruby-identifier">new_data</span> = [<span class="ruby-identifier">time</span>.<span class="ruby-identifier">to_i</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">new_data</span>&#x000A;97:       &#x000A;98:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">rrd_file</span>, <span class="ruby-identifier">new_data</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;:&quot;</span>))&#x000A;99:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000051-source'>    <span class="ruby-comment cmt"># File lib/rrd/base.rb, line 94</span>&#x000A;94:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>(<span class="ruby-identifier">time</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">data</span>)&#x000A;95:       <span class="ruby-identifier">new_data</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-value">? </span><span class="ruby-value str">&quot;U&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">item</span>}&#x000A;96:       <span class="ruby-identifier">new_data</span> = [<span class="ruby-identifier">time</span>.<span class="ruby-identifier">to_i</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">new_data</span>&#x000A;97:       &#x000A;98:       <span class="ruby-constant">Wrapper</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">rrd_file</span>, <span class="ruby-identifier">new_data</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;:&quot;</span>))&#x000A;99:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
             </div>
